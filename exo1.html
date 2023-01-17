@@ -1,0 +1,30 @@
+<html>
+    <head>
+            <title>Exo1</title>
+    </head>
+    <body>
+        <pre> 
+            SELECT ?tennis ?nom_de_famille ?nom_de_familleLabel ?prénom ?prénomLabel ?distinction_reçue 
+            ?distinction_reçueLabel ?victoire ?victoireLabel ?image ?pays_de_citoyenneté ?pays_de_citoyennetéLabel ?langues_parlées__écrites_ou_signées 
+            ?langues_parlées__écrites_ou_signéesLabel ?hauteur ?conjoint_ou_conjointe ?conjoint_ou_conjointeLabel ?résidence ?résidenceLabel
+             ?fin_de_la_période_d_activité WHERE {
+                SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+                
+              
+                OPTIONAL { ?tennis wdt:P735 ?prénom. }
+                OPTIONAL { ?tennis wdt:P166 ?distinction_reçue. }
+                OPTIONAL { ?tennis wdt:P2522 ?victoire. }
+                OPTIONAL { ?tennis wdt:P18 ?image. }
+                OPTIONAL { ?tennis wdt:P27 ?pays_de_citoyenneté. }
+                OPTIONAL { ?tennis wdt:P1412 ?langues_parlées__écrites_ou_signées. }
+                OPTIONAL { ?tennis wdt:P2048 ?hauteur. }
+                OPTIONAL { ?tennis wdt:P26 ?conjoint_ou_conjointe. }
+                OPTIONAL { ?tennis wdt:P551 ?résidence. }
+                OPTIONAL { ?tennis wdt:P2032 ?fin_de_la_période_d_activité. }
+              }
+              LIMIT 100
+        </pre>
+        <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Ftennis%20%3Fnom_de_famille%20%3Fnom_de_familleLabel%20%3Fpr%C3%A9nom%20%3Fpr%C3%A9nomLabel%20%3Fdistinction_re%C3%A7ue%20%3Fdistinction_re%C3%A7ueLabel%20%3Fvictoire%20%3FvictoireLabel%20%3Fimage%20%3Fpays_de_citoyennet%C3%A9%20%3Fpays_de_citoyennet%C3%A9Label%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9esLabel%20%3Fhauteur%20%3Fconjoint_ou_conjointe%20%3Fconjoint_ou_conjointeLabel%20%3Fr%C3%A9sidence%20%3Fr%C3%A9sidenceLabel%20%3Ffin_de_la_p%C3%A9riode_d_activit%C3%A9%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%0A%20%20%3Ftennis%20wdt%3AP641%20wd%3AQ847.%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP734%20%3Fnom_de_famille.%20%7D%0A%20%20OPTIONAL%20%7B%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP735%20%3Fpr%C3%A9nom.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP166%20%3Fdistinction_re%C3%A7ue.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP2522%20%3Fvictoire.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP18%20%3Fimage.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP27%20%3Fpays_de_citoyennet%C3%A9.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP1412%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP2048%20%3Fhauteur.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP26%20%3Fconjoint_ou_conjointe.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP551%20%3Fr%C3%A9sidence.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftennis%20wdt%3AP2032%20%3Ffin_de_la_p%C3%A9riode_d_activit%C3%A9.%20%7D%0A%7D%0ALIMIT%20100"
+         referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    </body>
+</html>
